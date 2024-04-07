@@ -1,6 +1,7 @@
 import Block from '../components/Block';
 import Wrapper from '../components/Wrapper';
-import { Box, Flex, Divider } from '@mantine/core';
+import React, { useState, useEffect } from 'react';
+import { Box, Flex, Divider, Loader, Center } from '@mantine/core';
 import { IconStethoscope, IconNotebook, IconMap, IconHeart, IconVaccine, IconApple } from '@tabler/icons-react';
 import { useMediaQuery } from '@mantine/hooks';
 
@@ -36,6 +37,16 @@ const recaptchaSiteKey = '6LeJAGgpAAAAAJMPwrZeB3H5reXW_CdvDJsrMmfg';
 
 export default function HomePage() {
   const isMobile = useMediaQuery('(max-width: 768px)');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   return (
     <>
@@ -54,6 +65,12 @@ export default function HomePage() {
           heading="Ancaster Central"
           sticky
         />
+        {isLoading && (
+          <Center style={{ width: '98vw', height: '50vh' }}>
+            <Loader size="sm" />
+          </Center>
+        )}
+          <Box style={{opacity: isLoading ? '0' : '1'}}>
         <Box mt="-18.6vh">
           <Wrapper
             type="section"
@@ -253,6 +270,7 @@ export default function HomePage() {
           borderRadius="8px"
         />
       </Wrapper>
+      </Box>
         <Block
           type="footer"
           data={data}
