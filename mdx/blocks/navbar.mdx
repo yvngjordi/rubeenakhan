@@ -1,0 +1,33 @@
+```typescript
+import { Block } from '@sparkblock/core';
+
+const links = [
+  { link: '#', label: 'Home' },
+  { link: '#', label: 'About' },
+  {
+    link: '#1',
+    label: 'Services',
+    links: [
+      { link: '#', label: 'Marketing' },
+      { link: '#', label: 'Graphic design' },
+    ],
+  },
+  { link: '#', label: 'Contact' },
+];
+
+const Component() {
+  return (
+    <Block
+      type="navbar"
+      links={links}
+      heading="Navbar title"
+      image="logo.png"
+      linkLinkedin="#"
+      linkX="#"
+      linkGithub="#"
+      sticky
+      theme
+    />
+  );
+}
+```

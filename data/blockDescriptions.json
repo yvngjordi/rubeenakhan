@@ -1,0 +1,608 @@
+[
+  {
+    "name": "navbar",
+    "description": "The Navbar component serves as a navigational header for web applications, featuring dynamic content rendering and responsive design. It includes a collapsible drawer for mobile views, theme switching capabilities, and social media action icons for enhanced user engagement. This component supports sticky positioning for persistent visibility, custom styling via CSS properties, and dynamic importing for transition effects, providing a smooth and adaptable user experience. Additionally, it accommodates an optional image or logo, which can be adjusted for dark mode, and a structured list of navigation links, including dropdown menus for hierarchical organization.",
+    "props": [
+      {
+        "propName": "links",
+        "propType": "LinkItem[]",
+        "propDescription": "Array of navigation links to display in the navbar, each potentially containing a nested array of sub-links for dropdown menus."
+      },
+      {
+        "propName": "heading",
+        "propType": "string",
+        "propDescription": "Optional heading text to display in the navbar, typically used for branding or the application title."
+      },
+      {
+        "propName": "sticky",
+        "propType": "boolean",
+        "propDescription": "Determines if the navbar should use sticky positioning, making it remain visible at the top of the viewport as the user scrolls."
+      },
+      {
+        "propName": "theme",
+        "propType": "boolean",
+        "propDescription": "Enables a theme switcher within the navbar, allowing users to toggle between light and dark modes."
+      },
+      {
+        "propName": "style",
+        "propType": "CSSProperties",
+        "propDescription": "Custom styles to apply to the navbar container, offering design flexibility."
+      },
+      {
+        "propName": "linkTwitter",
+        "propType": "string",
+        "propDescription": "URL for the Twitter social media link."
+      },
+      {
+        "propName": "linkYoutube",
+        "propType": "string",
+        "propDescription": "URL for the YouTube social media link."
+      },
+      {
+        "propName": "linkInstagram",
+        "propType": "string",
+        "propDescription": "URL for the Instagram social media link."
+      },
+      {
+        "propName": "linkLinkedin",
+        "propType": "string",
+        "propDescription": "URL for the LinkedIn social media link."
+      },
+      {
+        "propName": "linkGithub",
+        "propType": "string",
+        "propDescription": "URL for the GitHub social media link."
+      },
+      {
+        "propName": "linkFacebook",
+        "propType": "string",
+        "propDescription": "URL for the Facebook social media link."
+      },
+      {
+        "propName": "linkMeta",
+        "propType": "string",
+        "propDescription": "URL for the Meta social media link."
+      },
+      {
+        "propName": "linkX",
+        "propType": "string",
+        "propDescription": "URL for an additional custom social media link."
+      },
+      {
+        "propName": "imageDarkMode",
+        "propType": "string",
+        "propDescription": "Optional image URL to display in the navbar when dark mode is active, providing a visual adaptation to theme changes."
+      }
+    ]
+  },
+    {
+      "name": "footer",
+      "description": "The Footer component provides a comprehensive structure for a website's footer section, incorporating dynamic content such as images, headings, paragraphs, and links. It supports responsive design for mobile devices, theme-based image switching for light and dark modes, and a variety of social media links. The footer is divided into sections that can include grouped links with titles and individual links. The component leverages Mantine's useMediaQuery hook for responsiveness and useMantineColorScheme for theme detection. It also utilizes dynamic importing for non-server-side rendering components like Transition, enhancing the user experience with animations.",
+      "props": [
+        {
+          "propName": "data",
+          "propType": "GroupData[]",
+          "propDescription": "Optional array of groups, each containing a title and an array of links, to display in the footer."
+        },
+        {
+          "propName": "image",
+          "propType": "string",
+          "propDescription": "URL of the default image to display in the footer."
+        },
+        {
+          "propName": "imageDarkMode",
+          "propType": "string",
+          "propDescription": "URL of the image to display in the footer when in dark mode."
+        },
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Optional heading text for the footer."
+        },
+        {
+          "propName": "paragraph",
+          "propType": "string | string[]",
+          "propDescription": "Optional paragraph or array of paragraphs with detailed text."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Optional custom styles applied to the footer component."
+        },
+        {
+          "propName": "linkTwitter",
+          "propType": "string",
+          "propDescription": "URL for the Twitter social media link."
+        },
+        {
+          "propName": "linkYoutube",
+          "propType": "string",
+          "propDescription": "URL for the YouTube social media link."
+        },
+        {
+          "propName": "linkInstagram",
+          "propType": "string",
+          "propDescription": "URL for the Instagram social media link."
+        },
+        {
+          "propName": "linkLinkedin",
+          "propType": "string",
+          "propDescription": "URL for the LinkedIn social media link."
+        },
+        {
+          "propName": "linkGithub",
+          "propType": "string",
+          "propDescription": "URL for the GitHub social media link."
+        },
+        {
+          "propName": "linkFacebook",
+          "propType": "string",
+          "propDescription": "URL for the Facebook social media link."
+        },
+        {
+          "propName": "linkMeta",
+          "propType": "string",
+          "propDescription": "URL for the Meta social media link."
+        },
+        {
+          "propName": "linkX",
+          "propType": "string",
+          "propDescription": "URL for an additional social media or external link."
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "description": "The Banner component displays a message or content in a styled banner format. It leverages the Flex component from Mantine for alignment and optionally includes icons from Tabler Icons. It supports customization for background and text color, an optional click action, custom styles, and the ability to include an icon.",
+      "props": [
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Defines the main text displayed in the banner."
+        },
+        {
+          "propName": "icon",
+          "propType": "React.ReactNode",
+          "propDescription": "Optional icon displayed alongside the banner text. Accepts any React node, typically used for SVG icons."
+        },
+        {
+          "propName": "color",
+          "propType": "string",
+          "propDescription": "Sets the text color of the banner content."
+        },
+        {
+          "propName": "background",
+          "propType": "string",
+          "propDescription": "Specifies the background color of the banner."
+        },
+        {
+          "propName": "onClick",
+          "propType": "function",
+          "propDescription": "Optional click event handler that is called when the banner is clicked. Can be used to navigate, open a modal, etc."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Optional style object to apply custom styles to the banner."
+        }
+      ]
+    },
+    {
+      "name": "contact",
+      "description": "The Contact component is a comprehensive form designed for gathering user inputs, including name, email, message, and purpose, with the option to include a captcha for security. It utilizes Mantine's useForm for form state management and various UI components for a rich user interface. The component is responsive, adjusting layout based on the device's screen size. It supports customization through props for dropdown options, image display, reCAPTCHA integration, and styling. Additionally, it includes optional headings, subheadings, and paragraphs for more detailed content presentation.",
+      "props": [
+        {
+          "propName": "dropdown",
+          "propType": "{ value: string; label: string }[]",
+          "propDescription": "Options for the dropdown select component."
+        },
+        {
+          "propName": "image",
+          "propType": "string",
+          "propDescription": "URL of the image to display in the contact form."
+        },
+        {
+          "propName": "fetchLink",
+          "propType": "string",
+          "propDescription": "Endpoint URL to which the form data is submitted."
+        },
+        {
+          "propName": "captcha",
+          "propType": "boolean",
+          "propDescription": "Determines whether a reCAPTCHA is included in the form for security."
+        },
+        {
+          "propName": "siteKey",
+          "propType": "string",
+          "propDescription": "Site key for the reCAPTCHA integration."
+        },
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Optional heading text for the contact form."
+        },
+        {
+          "propName": "subheading",
+          "propType": "string",
+          "propDescription": "Optional subheading text for the contact form."
+        },
+        {
+          "propName": "paragraphs",
+          "propType": "string[]",
+          "propDescription": "Optional paragraphs of text to provide additional information."
+        },
+        {
+          "propName": "buttonLabel",
+          "propType": "string",
+          "propDescription": "Label for the submit button."
+        },
+        {
+          "propName": "button",
+          "propType": "React.CSSProperties",
+          "propDescription": "Custom styles for the submit button."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Custom styles for the main component wrapping the contact form."
+        }
+      ]
+    },
+    {
+      "name": "switches",
+      "description": "The switches block is a customizable and responsive UI block that presents a series of switchable options, each with a title and description. It supports dynamic interaction through an optional callback function for switch state changes. The component can include a heading, subheading, and paragraphs for additional context, with text alignment customizable via props. Designed for flexibility, it allows for the customization of the switch's background color and disabled state on a per-item basis. The use of dynamic imports and responsive design techniques ensures a smooth user experience across device sizes.",
+      "props": [
+        {
+          "propName": "data",
+          "propType": "SwitchDataItem[]",
+          "propDescription": "An array of items to be displayed, each with a title, description, optional background color, and disabled state."
+        },
+        {
+          "propName": "onSwitchChange",
+          "propType": "function",
+          "propDescription": "Optional callback function that is called when any switch is toggled, receiving the title of the switched item and its new state."
+        },
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Optional heading text for the switch block."
+        },
+        {
+          "propName": "subheading",
+          "propType": "string",
+          "propDescription": "Optional subheading text, providing additional context."
+        },
+        {
+          "propName": "paragraph",
+          "propType": "string | string[]",
+          "propDescription": "Optional paragraph or array of paragraphs to accompany the heading and subheading."
+        },
+        {
+          "propName": "textRight",
+          "propType": "boolean",
+          "propDescription": "Aligns the text to the right. Default alignment is left."
+        },
+        {
+          "propName": "textCenter",
+          "propType": "boolean",
+          "propDescription": "Centers the text. Overrides textRight if both are true."
+        },
+        {
+          "propName": "textLeft",
+          "propType": "boolean",
+          "propDescription": "Aligns the text to the left. This is the default behavior and is included for explicit configuration."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Custom styles to be applied to the switch block container."
+        }
+      ]
+    },
+    {
+      "name": "document",
+      "description": "The Document component is designed to embed different types of documents such as PDFs, DOCX, PPTX, or other file types into a React application. It allows for the customization of the embedded view through various props such as source URL, document type, margins, padding, display controls, and dimensions. This component utilizes an iframe to display the content and supports integration with Google Docs Viewer for DOCX and PPTX files, providing a seamless viewing experience without requiring the user to leave the application.",
+      "props": [
+        {
+          "propName": "file",
+          "propType": "string",
+          "propDescription": "The source URL of the document file to be embedded."
+        },
+        {
+          "propName": "fileType",
+          "propType": "'pdf' | 'docx' | 'pptx' | 'other'",
+          "propDescription": "The type of document file being embedded. Supports 'pdf', 'docx', 'pptx', or 'other'."
+        },
+        {
+          "propName": "margin",
+          "propType": "string",
+          "propDescription": "Optional margin around the embed container. Defaults to '0'."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Optional CSSProperties object to apply custom styles to the embed container."
+        },
+        {
+          "propName": "padding",
+          "propType": "string",
+          "propDescription": "Optional padding inside the embed container. Defaults to '0'."
+        },
+        {
+          "propName": "controls",
+          "propType": "boolean",
+          "propDescription": "Determines if the embedded document should display controls (if applicable). Defaults to true."
+        },
+        {
+          "propName": "width",
+          "propType": "string",
+          "propDescription": "The width of the iframe containing the embedded document. Defaults to '100%'."
+        },
+        {
+          "propName": "height",
+          "propType": "string",
+          "propDescription": "The height of the iframe containing the embedded document. Defaults to '80vh'."
+        }
+      ]
+    },
+    {
+      "name": "feature",
+      "description": "The Feature component showcases key highlights or services with an option for icons, headings, subheadings, paragraphs, and one or two buttons for call-to-action. It supports responsive design, adjusting layout for mobile screens, and allows for text alignment customization. The component can display content in a stacked format or side-by-side, and it has the flexibility to include a list of items. Styling can be customized through CSS properties, and the component utilizes Mantine's theming for consistent design elements.",
+      "props": [
+        {
+          "propName": "icon",
+          "propType": "any",
+          "propDescription": "Optional icon displayed at the top of the feature component. Can be an image URL or a React component."
+        },
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Optional heading text for the feature."
+        },
+        {
+          "propName": "subheading",
+          "propType": "string",
+          "propDescription": "Optional subheading text, displayed below the heading."
+        },
+        {
+          "propName": "paragraph",
+          "propType": "string | string[]",
+          "propDescription": "Optional paragraph or array of paragraphs with detailed text."
+        },
+        {
+          "propName": "button",
+          "propType": "{ color?: string; backgroundColor?: string; text?: string; onClick?: () => void; border?: string; }",
+          "propDescription": "Optional primary button with customizable text, color, background color, border, and click handler."
+        },
+        {
+          "propName": "button2",
+          "propType": "{ color?: string; backgroundColor?: string; text?: string; onClick?: () => void; border?: string; }",
+          "propDescription": "Optional secondary button with customizable text, color, background color, border, and click handler."
+        },
+        {
+          "propName": "textRight",
+          "propType": "boolean",
+          "propDescription": "Aligns text to the right. Default alignment is left."
+        },
+        {
+          "propName": "textCenter",
+          "propType": "boolean",
+          "propDescription": "Centers the text. Overrides textRight if both are true."
+        },
+        {
+          "propName": "textLeft",
+          "propType": "boolean",
+          "propDescription": "Aligns text to the left. This is the default behavior and is included for explicit configuration."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Optional custom styles applied to the feature component."
+        },
+        {
+          "propName": "stack",
+          "propType": "boolean",
+          "propDescription": "Stacks the icon and text vertically. Useful for mobile responsiveness."
+        },
+        {
+          "propName": "list",
+          "propType": "string[]",
+          "propDescription": "Optional list of items to display in a bullet list format."
+        }
+      ]
+    },
+    {
+      "name": "map",
+      "description": "The Map component is designed to embed a Google Map into a React application, allowing users to visually locate an address or point of interest. It supports customization of dimensions, border radius, and additional styling through CSS properties. The map can be titled, and its address query is dynamically encoded to ensure proper display. The component seamlessly integrates into any UI, providing a visual reference point for locations mentioned or needed within the application.",
+      "props": [
+        {
+          "propName": "address",
+          "propType": "string",
+          "propDescription": "The address or location to display on the map. This is dynamically encoded into the map query."
+        },
+        {
+          "propName": "title",
+          "propType": "string",
+          "propDescription": "Optional title for the map, included in the address search query."
+        },
+        {
+          "propName": "height",
+          "propType": "string | number",
+          "propDescription": "The height of the map iframe. Defaults to '600' if not specified."
+        },
+        {
+          "propName": "width",
+          "propType": "string | number",
+          "propDescription": "The width of the map iframe. Defaults to '100%' if not specified."
+        },
+        {
+          "propName": "frame",
+          "propType": "string | number",
+          "propDescription": "The frame border of the map iframe. Defaults to '0' if not specified."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Custom styles to be applied to the map container."
+        },
+        {
+          "propName": "borderRadius",
+          "propType": "number | string",
+          "propDescription": "The border radius of the map iframe, allowing for rounded corners."
+        }
+      ]
+    },
+    {
+      "name": "markdown",
+      "description": "The Markdown component enhances the presentation of Markdown content in a React application, incorporating custom code blocks with syntax highlighting and dynamic content rendering. It features configurable settings for text alignment, styling, and syntax theme selection from predefined options, ensuring versatility in appearance. The component can display associated images, headings, subheadings, and paragraphs, offering a comprehensive content display solution. Additionally, it includes an action icon for easy code snippet copying and supports responsive design adjustments.",
+      "props": [
+        {
+          "propName": "markdown",
+          "propType": "string",
+          "propDescription": "Markdown content to be rendered, supporting standard Markdown syntax for dynamic text presentation."
+        },
+        {
+          "propName": "image",
+          "propType": "string",
+          "propDescription": "Optional image URL to be displayed, enhancing the visual appeal of the content section."
+        },
+        {
+          "propName": "heading",
+          "propType": "string",
+          "propDescription": "Optional heading text, providing a title or introduction to the content area."
+        },
+        {
+          "propName": "subheading",
+          "propType": "string",
+          "propDescription": "Optional subheading text, offering additional context or information below the heading."
+        },
+        {
+          "propName": "paragraph",
+          "propType": "string | string[]",
+          "propDescription": "Optional descriptive text or array of texts, complementing the main content with detailed paragraphs."
+        },
+        {
+          "propName": "textRight",
+          "propType": "boolean",
+          "propDescription": "Aligns text to the right side, enabling layout customization."
+        },
+        {
+          "propName": "textCenter",
+          "propType": "boolean",
+          "propDescription": "Centers text within the component, suitable for headings or central-focused content."
+        },
+        {
+          "propName": "textLeft",
+          "propType": "boolean",
+          "propDescription": "Aligns text to the left side, the default text alignment."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Custom CSS properties to style the component container, offering design flexibility."
+        },
+        {
+          "propName": "syntaxTheme",
+          "propType": "keyof typeof themeOptions",
+          "propDescription": "Specifies the syntax highlighting theme for code blocks within the Markdown content, selectable from predefined options."
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "description": "The Video block is designed to embed a video within a React application, supporting both direct video file sources and YouTube links. It offers various playback options such as autoplay, loop, and mute, along with control visibility. The component can be styled using CSS properties and also allows for specifying dimensions. For YouTube videos, it automatically constructs the appropriate embed URL. Additional visual customization can be applied via className, padding, and margin properties.",
+      "props": [
+        {
+          "propName": "video",
+          "propType": "string",
+          "propDescription": "The source URL of the video. Can be a direct link to a video file or a YouTube link."
+        },
+        {
+          "propName": "autoplay",
+          "propType": "boolean",
+          "propDescription": "If true, the video will start playing as soon as it is ready. Defaults to false."
+        },
+        {
+          "propName": "controls",
+          "propType": "boolean",
+          "propDescription": "Determines whether video controls should be displayed. Defaults to true."
+        },
+        {
+          "propName": "loop",
+          "propType": "boolean",
+          "propDescription": "If true, the video will start over again, every time it is finished. Defaults to false."
+        },
+        {
+          "propName": "muted",
+          "propType": "boolean",
+          "propDescription": "If true, the video will be muted. Defaults to false."
+        },
+        {
+          "propName": "poster",
+          "propType": "string",
+          "propDescription": "The image to be shown while the video is downloading, or until the user hits the play button."
+        },
+        {
+          "propName": "style",
+          "propType": "CSSProperties",
+          "propDescription": "Custom CSS styles to be applied to the video container."
+        },
+        {
+          "propName": "width",
+          "propType": "string",
+          "propDescription": "The width of the video, which can be in percentages or pixels. Defaults to '100%'."
+        },
+        {
+          "propName": "height",
+          "propType": "string",
+          "propDescription": "The height of the video, which can be in percentages or pixels. Defaults to '80vh'."
+        },
+        {
+          "propName": "className",
+          "propType": "string",
+          "propDescription": "Custom class name to be applied to the video container for further styling."
+        },
+        {
+          "propName": "padding",
+          "propType": "string | number",
+          "propDescription": "Padding around the video within its container."
+        },
+        {
+          "propName": "margin",
+          "propType": "string | number",
+          "propDescription": "Margin around the video container."
+        }
+      ]
+    },
+  {
+    "name": "table",
+    "description": "The table block is designed to render tabular data, providing flexibility through customizable headers, styling options, and interactive features like row highlighting on hover and striped rows for enhanced readability. It utilizes the Mantine Table component as its foundation, allowing for the seamless integration of Mantine's design system and features. The component accepts an array of data items and headers, where each header defines a column in the table, and each data item corresponds to a row with values mapped to each column.",
+    "props": [
+      {
+        "propName": "data",
+        "propType": "DataItem[]",
+        "propDescription": "An array of objects where each object represents a row in the table, with key-value pairs corresponding to column data."
+      },
+      {
+        "propName": "headers",
+        "propType": "{ key: string; label: string }[]",
+        "propDescription": "Defines the columns of the table. Each header object should contain a 'key' matching data object keys and a 'label' for the column header."
+      },
+      {
+        "propName": "style",
+        "propType": "CSSProperties",
+        "propDescription": "Custom CSS styles to be applied to the table."
+      },
+      {
+        "propName": "striped",
+        "propType": "boolean",
+        "propDescription": "If true, rows will have alternating background colors. Defaults to false."
+      },
+      {
+        "propName": "highlightOnHover",
+        "propType": "boolean",
+        "propDescription": "If true, rows will be highlighted when hovered over. Defaults to false."
+      }
+    ]
+  }
+]

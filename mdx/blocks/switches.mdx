@@ -1,0 +1,23 @@
+```typescript
+import { Block } from '@sparkblock/core';
+
+const data = [
+  { title: "Enable Notifications", description: "Turn on notifications to stay updated.", backgroundColor: "#f0f2f5", disabled: false },
+  { title: "Dark Mode", description: "Enable dark mode for a better night-time reading experience.", disabled: false }
+];
+
+const Component() {
+  return (
+  <>
+    <Block
+      type="switches"
+      data={data}
+      onSwitchChange={(title, checked) => console.log(`${title} is now ${checked ? 'enabled' : 'disabled'}`)}
+      heading="Switches Title"
+      paragraph="This is some example paragraph text for this block type. Copy the code in the tab above!"
+      textCenter
+    />
+  </>
+  );
+}
+```

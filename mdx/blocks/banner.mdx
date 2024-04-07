@@ -1,0 +1,19 @@
+```typescript
+import { Block } from '@sparkblock/core';
+import { IconCube } from '@tabler/icons-react';
+
+const Component() {
+  return (
+  <>
+    <Block
+      type="banner"
+      heading="Banner Title"
+      leftIcon={<IconCube />}
+      color="white"
+      background="black"
+      onClick={() => console.log('Banner clicked')}
+    />
+  </>
+  );
+}
+```

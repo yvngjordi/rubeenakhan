@@ -1,0 +1,18 @@
+```typescript
+import { Block } from '@sparkblock/core';
+
+const Component() {
+
+  const markdownData = "## Welcome to Our Platform\nHere's some **Markdown** content with `code` snippets and more.\n```js\nconsole.log('Hello, world!');\n```"
+
+  return (
+  <>
+    <Block
+      type="markdown"
+      markdown={markdownData}
+      syntaxTheme="vs"
+    />
+  </>
+  );
+}
+```

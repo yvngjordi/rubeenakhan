@@ -1,0 +1,20 @@
+```typescript
+import { Block } from '@sparkblock/core';
+import { IconCube } from '@tabler/icons-react';
+
+const Component() {
+  return (
+  <>
+    <Block
+      type="feature"
+      icon={<IconCube />}
+      heading="Feature Title"
+      paragraph="This is some example paragraph text for this block type. Copy the code in the tab above!"
+      button={{ text: "Learn More", onClick: () => console.log("Clicked!")}}
+      textCenter
+      stack
+    />
+  </>
+  );
+}
+```

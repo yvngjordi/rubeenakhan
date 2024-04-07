@@ -1,0 +1,21 @@
+```typescript
+import { Block } from '@sparkblock/core';
+
+const Contact() {
+  return (
+  <>
+    <Block
+      type="contact"
+      dropdown={[{ value: "feedback", label: "Feedback" }, { value: "support", label: "Support" }]}
+      image="https://via.placeholder.com/1024"
+      fetchLink="https://path/to/contact.php"
+      captcha={true}
+      siteKey="your-reCAPTCHA-site-key"
+      heading="Contact Title"
+      paragraph={["This is some example paragraph text for this block type. Copy the code in the tab above!"]}
+      buttonLabel="Send Message"
+    />
+  </>
+  );
+}
+```

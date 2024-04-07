@@ -1,0 +1,28 @@
+```typescript
+import { Block } from '@sparkblock/core';
+
+const data = [
+  { id: '1', name: 'John Doe', email: 'john@doe.com', role: 'Administrator' },
+  { id: '2', name: 'Jane Doe', email: 'jane@doe.com', role: 'User' }
+];
+
+const headers = [
+  { key: 'id', label: 'ID' },
+  { key: 'name', label: 'Name' },
+  { key: 'email', label: 'Email' },
+  { key: 'role', label: 'Role' }
+];
+
+const Component() {
+  return (
+  <>
+    <Block
+      type="table"
+      data={data}
+      headers={headers}
+      striped
+    />
+  </>
+  );
+}
+```
