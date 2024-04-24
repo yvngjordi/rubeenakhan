@@ -37,20 +37,17 @@ const recaptchaSiteKey = '6LeJAGgpAAAAAJMPwrZeB3H5reXW_CdvDJsrMmfg';
 
 export default function HomePage() {
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
+    setTimeout(() => {
+      setIsVisible(true);
     }, 2000);
-
-    return () => clearTimeout(timer);
   }, []);
-
 
   return (
     <>
-    <Box>
+      <Box style={{ opacity: isVisible ? '1' : '0', transition: 'opacity 1.35s ease-in' }}>
     <Block
       type="banner"
       heading="We have recently moved locations!"
@@ -65,12 +62,7 @@ export default function HomePage() {
           heading="Ancaster Central"
           sticky
         />
-        {isLoading && (
-          <Center style={{ width: '98vw', height: '50vh' }}>
-            <Loader size="sm" />
-          </Center>
-        )}
-          <Box style={{opacity: isLoading ? '0' : '1'}}>
+          <Box>
         <Box mt="-18.6vh">
           <Wrapper
             type="section"
