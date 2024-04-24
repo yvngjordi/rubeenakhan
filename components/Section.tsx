@@ -132,19 +132,23 @@ case ('B' || 'b'):
   return (
     <Box style={containerStyleB}>
     <Transition transitionFrom="left">
-    {(isMobile && image) || (image && stack) && (
-      <Box p="lg">
-        <Image p="xl" src={image} alt="" style={{ width: '100%', borderRadius: imageCircle ? '100%' : theme.radius.md }} />
-      </Box>
+    <Flex>
+    {((isMobile && image) || (image && stack)) && (
+      <Flex w="150px">
+        <Image src={image} alt="" w="150px" style={{ width: '150px', height:'150px', borderRadius: imageCircle ? '100%' : theme.radius.md, boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }} />
+      </Flex>
     )}
+    </Flex>
     </Transition>
     <Flex>
     <Transition transitionFrom="left">
+    <Flex>
       {!isMobile && image && !stack && (
-        <Box p="lg">
-          <Image src={image} alt="" style={{ width: '120px', height:'120px', borderRadius: imageCircle ? '100%' : theme.radius.md, alignSelf: 'center' }} />
-        </Box>
+        <Flex p="lg">
+          <Image src={image} alt="" style={{ width: '150px', borderRadius: imageCircle ? '100%' : theme.radius.md, boxShadow: '0 2px 4px rgba(0,0,0,0.1)', alignSelf: 'center' }} />
+        </Flex>
       )}
+      </Flex>
     </Transition>
     <Transition transitionFrom="right" blur>
       <Box style={{ flexGrow: 1, textAlign: textAlign }} p="md">
@@ -203,12 +207,12 @@ case 'C' || 'c':
     <Transition transitionFrom="left">
     {isMobile && image && (
       <Box p="xl">
-        <Image src={image} alt="" style={{ width: '90', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
+        <Image src={image} alt="" style={{ width: '90', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
       </Box>
     )}
     {image && stack && !isMobile && (
       <Box p="xl">
-        <Image src={image} alt="" style={{ width: '90', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
+        <Image src={image} alt="" style={{ width: '90', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
       </Box>
     )}
     </Transition>
@@ -216,7 +220,7 @@ case 'C' || 'c':
     <Transition transitionFrom="left">
       {!isMobile && image && !stack && (
           <Box p="xl">
-            <Image src={image} alt="" style={{ width: '33vw', alignSelf: 'center', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
+            <Image src={image} alt="" style={{ width: '33vw', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', alignSelf: 'center', borderRadius:imageCircle ? '100%' : theme.radius.md }} />
           </Box>
       )}
     </Transition>

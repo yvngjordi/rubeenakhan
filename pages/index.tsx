@@ -121,9 +121,9 @@ export default function HomePage() {
           >
                 <Block
                   type="section"
-                  variant="B"
+                  variant="A"
                   heading="Now serving students!"
-                  paragraph={["Come by our clinic if you're a student for anything from XYZ to ABC. We'll address what you need help with and work alongside you."]}
+                  paragraph={["Come by our clinic where we're dedicated to serving students as well as your children. We'll address what you need help with and work alongside you."]}
                   image="bag.png"
                   textLeft
                 />
@@ -229,7 +229,7 @@ export default function HomePage() {
                 heading="Dr. Juliana Giraldo Salazar"
                 subheading="Pediatric Respirologist"
                 paragraph={["Dr. Giraldo Salazar specializes in treating asthma, allergies, and respiratory diseases in children."]}
-                image="https://via.placeholder.com/150"
+                image="team/2.jpg"
               />
             </Flex>
           </Wrapper>
