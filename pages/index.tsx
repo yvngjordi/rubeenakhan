@@ -33,7 +33,7 @@ const dropdownOptions = [
 
 const imageSrc = 'bg3.jpg';
 const fetchURL = 'https://webdragon.dev/contact.php';
-const recaptchaSiteKey = '6LfGF8UpAAAAAO1Yj4CLSC_ojg7HYXoRATMNX0mU';
+const recaptchaSiteKey = '6Lfi0cQpAAAAADBMtv-9-m4pTm8RBeF0pD-5JHg2';
 
 export default function HomePage() {
   const isMobile = useMediaQuery('(max-width: 768px)');
