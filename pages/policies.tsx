@@ -6,9 +6,16 @@ import { useMediaQuery } from '@mantine/hooks';
 
 const links = [
   { link: '/', label: 'Home' },
-  { link: 'https://rubeenakhanpediatrics.health/#about', label: 'About' },
+  { link: 'https://rubeenakhanpediatrics.com/#about', label: 'About' },
   { link: '/services', label: 'Services'},
-  { link: 'https://rubeenakhanpediatrics.health/#team', label: 'Our Team' },
+  {
+    label: 'Resources',
+    links: [
+      { link: '/referral-letter', label: 'Referral Letter' },
+      { link: '/policies', label: 'Policies' },
+    ],
+  },
+  { link: 'https://rubeenakhanpediatrics.com/#team', label: 'Our Team' },
   { link: '#contact', label: 'Contact' },
 ];
 
@@ -16,9 +23,9 @@ const data = [
   {
     title: 'Ancaster Central',
     links: [
-      { label: 'About Us', link: 'https://rubeenakhanpediatrics.health/#about' },
+      { label: 'About Us', link: 'https://rubeenakhanpediatrics.com/#about' },
       { label: 'Our Services', link: '/services' },
-      { label: 'Meet Our Team', link: 'https://rubeenakhanpediatrics.health/#team' },
+      { label: 'Meet Our Team', link: 'https://rubeenakhanpediatrics.com/#team' },
       { label: 'Contact', link: '#contact' },
     ],
   },

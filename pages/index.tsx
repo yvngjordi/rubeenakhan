@@ -8,7 +8,14 @@ import { useMediaQuery } from '@mantine/hooks';
 const links = [
   { link: '/', label: 'Home' },
   { link: '#about', label: 'About' },
-  { link: '/services', label: 'Services'},
+  { link: '/services', label: 'Services' },
+  {
+    label: 'Resources',
+    links: [
+      { link: '/referral-letter', label: 'Referral Letter' },
+      { link: '/policies', label: 'Policies' },
+    ],
+  },
   { link: '#team', label: 'Our Team' },
   { link: '#contact', label: 'Contact' },
 ];

@@ -1,14 +1,21 @@
 import Block from '../components/Block';
 import Wrapper from '../components/Wrapper';
-import { Box, Flex, Divider } from '@mantine/core';
+import { Box, Flex, Divider, Title } from '@mantine/core';
 import { IconStethoscope, IconNotebook, IconMap, IconHeart, IconVaccine, IconApple } from '@tabler/icons-react';
 import { useMediaQuery } from '@mantine/hooks';
 
 const links = [
   { link: '/', label: 'Home' },
-  { link: 'https://rubeenakhanpediatrics.health/#about', label: 'About' },
+  { link: 'https://rubeenakhanpediatrics.com/#about', label: 'About' },
   { link: '/services', label: 'Services'},
-  { link: 'https://rubeenakhanpediatrics.health/#team', label: 'Our Team' },
+  {
+    label: 'Resources',
+    links: [
+      { link: '/referral-letter', label: 'Referral Letter' },
+      { link: '/policies', label: 'Policies' },
+    ],
+  },
+  { link: 'https://rubeenakhanpediatrics.com/#team', label: 'Our Team' },
   { link: '#contact', label: 'Contact' },
 ];
 
@@ -16,9 +23,9 @@ const data = [
   {
     title: 'Ancaster Central',
     links: [
-      { label: 'About Us', link: 'https://rubeenakhanpediatrics.health/#about' },
+      { label: 'About Us', link: 'https://rubeenakhanpediatrics.com/#about' },
       { label: 'Our Services', link: '/services' },
-      { label: 'Meet Our Team', link: 'https://rubeenakhanpediatrics.health/#team' },
+      { label: 'Meet Our Team', link: 'https://rubeenakhanpediatrics.com/#team' },
       { label: 'Contact', link: '#contact' },
     ],
   },
@@ -61,12 +68,25 @@ export default function HomePage() {
             py={50}
             px={isMobile ? 30 : 200}
           >
+          <Title mb="sm">General pediatrics referral letter</Title>
             <Block
               type="document"
-              file="/documents/referral_letter_ACCC.pdf"
+              file="documents/referral_letter_ACCC.pdf"
               fileType="pdf"
             />
         </Wrapper>
+        <Wrapper
+          type="section"
+          py={50}
+          px={isMobile ? 30 : 200}
+        >
+          <Title mb="sm">Cardiology pediatrics referral letter</Title>
+          <Block
+            type="document"
+            file="documents/cardiology_referral_letter_ACCC.pdf"
+            fileType="pdf"
+          />
+      </Wrapper>
       </Box>
         <Wrapper
           type="section"
