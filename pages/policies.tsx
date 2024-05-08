@@ -109,13 +109,13 @@ export default function HomePage() {
         py={40}
         px={isMobile ? 20 : 200}
       >
-        <Block
-          type="map"
-          address="1039 Upper James St. Hamilton Ontario"
-          title="Ancaster Central Childrens Clinic"
-          height={400}
-          borderRadius="8px"
-        />
+      <Block
+        type="map"
+        address="1039 Upper James St. Hamilton Ontario"
+        title="Ancaster Central Childrens Clinic"
+        height={400}
+        borderRadius="8px"
+      />
       </Wrapper>
         <Block
           type="footer"

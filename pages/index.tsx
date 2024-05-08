@@ -59,6 +59,7 @@ export default function HomePage() {
       type="banner"
       heading="We have recently moved locations!"
       background="navy"
+      link="https://www.google.com/maps/place/1039+Upper+James+St,+Hamilton,+ON+L9C+3A6,+Canada/@43.221175,-79.884151,14z/data=!4m6!3m5!1s0x882c9afb17e9091d:0xf6795f7dcc14fe39!8m2!3d43.2211747!4d-79.8841514!16s%2Fg%2F11c43tncmx?hl=en&entry=ttu"
       color="white"
       icon={<IconMap size={20} />}
     />
@@ -206,7 +207,6 @@ export default function HomePage() {
                 heading="Dr. Rubeena Khan"
                 subheading="Pediatric Cardiologist"
                 paragraph={["Leading our clinic, Dr. Khan brings extensive experience in pediatric cardiology to provide specialized care."]}
-                image="https://via.placeholder.com/150"
               />
             </Flex>
             <Flex direction="column">
