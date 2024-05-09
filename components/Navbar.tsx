@@ -115,9 +115,23 @@ export default function Navbar({
     return (
     <>
 
-        <a key={link.label} href={link.link} className={classes.link} onClick={handleLinkClick}>
-          {link.label}
-        </a>
+    {menuItems ? (
+     <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
+       <Menu.Target>
+         <a href={link.link} className={classes.link} onClick={handleLinkClick}>
+           <Center>
+             <span className={classes.linkLabel}>{link.label}</span>
+             <IconChevronDown size="0.9rem" stroke={1.5} />
+           </Center>
+         </a>
+       </Menu.Target>
+       <Menu.Dropdown>{menuItems}</Menu.Dropdown>
+     </Menu>
+   ) : (
+     <a key={link.label} href={link.link} className={classes.link} onClick={handleLinkClick}>
+       {link.label}
+     </a>
+   )}
       {(linkTwitter || linkDiscord || linkMedium || linkYoutube || linkX || linkMeta || linkTwitter || linkGithub || linkLinkedin || linkFacebook) && (
       <Box h="100%">
       <Divider my={16} />
