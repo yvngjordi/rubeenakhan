@@ -19,6 +19,16 @@ const links = [
   { link: '#contact', label: 'Contact' },
 ];
 
+const linksMob = [
+  { link: '/', label: 'Home' },
+  { link: 'https://rubeenakhanpediatrics.com/#about', label: 'About' },
+  { link: '/services', label: 'Services'},
+  { link: '/referral-letter', label: 'Referral Letter' },
+  { link: '/policies', label: 'Policies' },
+  { link: 'https://rubeenakhanpediatrics.com/#team', label: 'Our Team' },
+  { link: '#contact', label: 'Contact' },
+];
+
 const data = [
   {
     title: 'Ancaster Central',
@@ -56,7 +66,7 @@ export default function HomePage() {
     />
         <Block
           type="navbar"
-          links={links}
+          links={isMobile ? linksMob : links}
           image="logo.png"
           heading="Ancaster Central"
           sticky

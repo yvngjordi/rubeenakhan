@@ -19,6 +19,16 @@ const links = [
   { link: '#contact', label: 'Contact' },
 ];
 
+const linksMob = [
+  { link: '/', label: 'Home' },
+  { link: 'https://rubeenakhanpediatrics.com/#about', label: 'About' },
+  { link: '/services', label: 'Services'},
+  { link: '/referral-letter', label: 'Referral Letter' },
+  { link: '/policies', label: 'Policies' },
+  { link: 'https://rubeenakhanpediatrics.com/#team', label: 'Our Team' },
+  { link: '#contact', label: 'Contact' },
+];
+
 const data = [
   {
     title: 'Ancaster Central',
@@ -56,7 +66,7 @@ export default function HomePage() {
     />
         <Block
           type="navbar"
-          links={links}
+          links={isMobile ? linksMob : links}
           image="logo.png"
           heading="Ancaster Central"
           sticky
@@ -69,29 +79,45 @@ export default function HomePage() {
             px={isMobile ? 30 : 200}
           >
           <h1>Services Offered at Ancaster Central Children’s Clinic</h1>
-          <h2>Pediatric Cardiology Clinic</h2>
-          <p>Headed by Dr. Khan, who has experience in pediatric cardiology dating back to 2007 when she was a fellow at hospitals for children, University of Toronto. She continued her pediatric cardiology training and electives at Master Children’s Hospital cardiology department during her residency from 2012 to 2016. She has been independently practicing as a community-based pediatrician with a focus in pediatric cardiology.</p>
-          <h3>Services offered:</h3>
-          <ul>
-              <li>Cardiology consultation</li>
-              <li>Electrocardiogram (ECG)</li>
-              <li>Cardiac examination, assessment, and evaluation for pediatric cardiology referrals</li>
-              <li>Pre-sports participation screening</li>
-              <li>Holter monitoring</li>
-              <li>2D and colour Doppler paediatric trans thoracic echocardiograms</li>
-          </ul>
-          <h2>Other Services Offered</h2>
-          <ul>
-              <li>Developmental assessment</li>
-              <li>School, learning, and behavioural issues</li>
-              <li>ADHD assessment and treatment</li>
-              <li>Common Pediatric ailments</li>
-              <li>Infant and premature newborn follow-up care</li>
-              <li>Adolescent and teenager clinic</li>
-              <li>Chest pain, murmur, fainting, and suspected heart disease clinic</li>
-              <li>Asthma, allergies, and respiratory diseases</li>
-              <li>Referrals accepted from hospital after discharge or from family doctors if concerned about pediatric ailment</li>
-          </ul>
+          <header>
+              <p>Best way to reach clinic for non urgent matters is via email: <a href="mailto:admin@rubeenakhanpediatrics.ca">admin@rubeenakhanpediatrics.ca</a></p>
+              <p>We prefer Email for bookings and non urgent matters</p>
+          </header>
+
+          <section>
+              <h2>Services Offered</h2>
+              <ul>
+                  <li>Pediatric Cardiology consultation</li>
+                  <li>Echocardiogram</li>
+                  <li>ECG</li>
+                  <li>Holter</li>
+                  <li>Pediatric Respirology and Asthma Consultation</li>
+                  <li>General Pediatric Consultations</li>
+                  <li>Other pediatric, general pediatric, routine paediatric care, urgent care, services offered at Ancaster central children’s clinic:</li>
+                  <ul>
+                      <li>Developmental assessment</li>
+                      <li>School, learning and behavioural issues</li>
+                      <li>ADHD assessment and treatment.</li>
+                      <li>Common Pediatric ailments.</li>
+                      <li>Infant and premature newborn follow up care.</li>
+                      <li>Adolescent and teenager clinic</li>
+                      <li>Chest pain, murmur, fainting and suspected heart disease clinic.</li>
+                      <li>Asthma allergies and respiratory diseases.</li>
+                      <li>Referrals accepted from hospital after discharge or from family doctors if concerned about pediatric ailment.</li>
+                  </ul>
+                  <li>Newborn Care</li>
+                  <li>Well baby care</li>
+                  <li>Routine vaccinations</li>
+                  <li>Travel advise and vaccination recommendations</li>
+                  <li>Walk in urgent care for fever, pneumonia, rashes, ear infections, injury, diarrhea , vomiting, rashes etc</li>
+                  <li>Adhd</li>
+                  <li>Anxiety</li>
+                  <li>Autism assessment</li>
+                  <li>Developmental assessment</li>
+              </ul>
+              <p>All consultations are done only if accompanied with referral from your child's doctor/family doctor/walk in clinic etc</p>
+              <p>Walk in urgent care is available from 10 am -4:00 pm on Tuesdays, Thursdays, Fridays, and some Saturdays. Please email or call the clinic prior to arrival.</p>
+          </section>
         </Wrapper>
       </Box>
         <Wrapper

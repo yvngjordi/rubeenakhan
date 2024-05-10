@@ -20,6 +20,16 @@ const links = [
   { link: '#contact', label: 'Contact' },
 ];
 
+const linksMob = [
+  { link: '/', label: 'Home' },
+  { link: '#about', label: 'About' },
+  { link: '/services', label: 'Services' },
+  { link: '/referral-letter', label: 'Referral Letter' },
+  { link: '/policies', label: 'Policies' },
+  { link: '#team', label: 'Our Team' },
+  { link: '#contact', label: 'Contact' },
+];
+
 const data = [
   {
     title: 'Ancaster Central',
@@ -65,7 +75,7 @@ export default function HomePage() {
     />
         <Block
           type="navbar"
-          links={links}
+          links={isMobile ? linksMob : links}
           image="logo.png"
           heading="Ancaster Central"
           sticky
@@ -122,8 +132,8 @@ export default function HomePage() {
                 <Block
                   type="section"
                   variant="A"
-                  heading="Now serving students!"
-                  paragraph={["Come by our clinic where we're dedicated to serving students as well as your children. We'll address what you need help with and work alongside you."]}
+                  heading="Students Welcome"
+                  paragraph={["We do take students, medical students, medical residents nurse practitioners, students for electives at our clinic."]}
                   image="bag.png"
                   textLeft
                 />
@@ -206,7 +216,7 @@ export default function HomePage() {
                 imageCircle
                 heading="Dr. Rubeena Khan"
                 subheading="Pediatric Cardiologist"
-                paragraph={["Leading our clinic, Dr. Khan brings extensive experience in pediatric cardiology to provide specialized care."]}
+                paragraph={["Dr. Giraldo Salazar went to medical school in Colombia where she was born. She moved to Canada in 2009 and completed her residency in Pediatrics at McMaster University and her Pediatric Respiratory Medicine training at University of Toronto. She is fluent in English and Spanish. Her hobbies include running and mountain biking."]}
               />
             </Flex>
             <Flex direction="column">
@@ -216,9 +226,9 @@ export default function HomePage() {
                 imageCircle
                 heading="Dinisha Patel"
                 subheading="Nurse Practitioner"
-                paragraph={["Dinisha Patel offers expert care and advice for children and their families, focusing on general pediatrics and developmental concerns."]}
+                paragraph={["Immense exposure and background in General Paediatrics. Experience in working with families with young children. Excellent multidisciplinary collaborative approach in treating children and advising their schools and their families. Well rounded management of children presenting with various developmental, behavioural and learning concerns, including assessment of attention, deficit hyperkinetic disorder (ADHD), autism, anxiety, mood disorders, depression, behavioural issues and developmental delays. Excellent in counselling, paediatric behavioural disorders, including temper, tantrums Oppositional, defiant disorders. Experience in paediatric primary care, care of the venue, born and mild, routine preventative vaccinations, and travel vaccinations before making international travel."]}
                 image="team/1.jpeg"
-              />
+              /> 
             </Flex>
             <Flex direction="column">
               <Block

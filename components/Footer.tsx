@@ -127,12 +127,12 @@ export default function Footer({
       <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
         {phone && (
           <>
-        <IconPhone/>  <a href={'tel:'+phone} className={classes.link} style={{marginLeft:'0.3vw', color:'black', fontSize:'14pt'}}>Phone: {phone}</a>
+        <IconPhone size={18}/>  <a href={'tel:'+phone} className={classes.link} style={{marginLeft:'0.3vw', color:'black', fontSize:'12pt'}}>Phone: {phone}</a>
           </>
         )}
         {fax && (
           <>
-        <IconPrinter style={{marginLeft:isMobile ? '3vw' : '0.6vw'}}/>  <a href={'tel:'+fax} className={classes.link} style={{marginLeft:'0.3vw', color:'black', fontSize:'14pt'}}>Fax: {fax}</a>
+        <IconPrinter size={18} style={{marginLeft:isMobile ? '3vw' : '0.6vw'}}/>  <a href={'tel:'+fax} className={classes.link} style={{marginLeft:'0.3vw', color:'black', fontSize:'12pt'}}>Fax: {fax}</a>
           </>
         )}
       </Group>
