@@ -147,7 +147,7 @@ export default function HomePage() {
       >
         <Block
           type="map"
-          address="1039 Upper James St. Hamilton Ontario"
+          address="26 Legend Court - Units 3 and 4, Ancaster. L9K 1J3"
           title="Ancaster Central Childrens Clinic"
           height={400}
           borderRadius="8px"
