@@ -69,7 +69,7 @@ export default function HomePage() {
       type="banner"
       heading="We have recently moved locations!"
       background="navy"
-      link="https://www.google.com/maps/place/1039+Upper+James+St,+Hamilton,+ON+L9C+3A6,+Canada/@43.221175,-79.884151,14z/data=!4m6!3m5!1s0x882c9afb17e9091d:0xf6795f7dcc14fe39!8m2!3d43.2211747!4d-79.8841514!16s%2Fg%2F11c43tncmx?hl=en&entry=ttu"
+      link="https://www.google.com/maps/place/26+Legend+Ct,+Ancaster,+ON+L9K+1J3/@43.2274675,-79.948005,286m/data=!3m2!1e3!4b1!4m6!3m5!1s0x882c85b8062e6f97:0x8a7b4d04a7fd7a55!8m2!3d43.2274675!4d-79.948005!16s%2Fg%2F11v3z1860b?hl=en&entry=ttu"
       color="white"
       icon={<IconMap size={20} />}
     />
@@ -158,7 +158,7 @@ export default function HomePage() {
               stack
               heading="Pediatrics"
               subheading="Expert Heart Care"
-              paragraph="Cardiology consultations, ECGs, and echocardiograms for your children."
+              paragraph="Cardiology consultations, ECGs, holters and echocardiograms for your children."
             />
             <Block
               type="feature"
@@ -216,7 +216,7 @@ export default function HomePage() {
                 imageCircle
                 heading="Dr. Rubeena Khan"
                 subheading="Pediatric Cardiologist"
-                paragraph={["Dr. Giraldo Salazar went to medical school in Colombia where she was born. She moved to Canada in 2009 and completed her residency in Pediatrics at McMaster University and her Pediatric Respiratory Medicine training at University of Toronto. She is fluent in English and Spanish. Her hobbies include running and mountain biking."]}
+                paragraph={["Dr. Rubeena Khan brings extensive training and expertise in Pediatrics and Pediatric Cardiology. She completed her initial medical training and postgraduate residency in India, where she earned a Master’s degree in Pediatrics from the prestigious All India Institute of Medical Sciences, New Delhi. Following this, Dr. Khan pursued four years of pediatric residency training at McMaster University and advanced her specialization with a Pediatric Cardiology fellowship at the renowned Hospital for Sick Children, University of Toronto. Dr. Khan is fluent in English, Urdu, and Hindi, enabling her to serve a diverse patient population with the highest standard of care."]}
               />
             </Flex>
             <Flex direction="column">
@@ -237,7 +237,7 @@ export default function HomePage() {
                 imageCircle
                 heading="Dr. Juliana Giraldo Salazar"
                 subheading="Pediatric Respirologist"
-                paragraph={["Dr. Giraldo Salazar specializes in treating asthma, allergies, and respiratory diseases in children."]}
+                paragraph={["Dr. Giraldo Salazar went to medical school in Colombia where she was born. She moved to Canada in 2009 and completed her residency in Pediatrics at McMaster University and her Pediatric Respiratory Medicine training at University of Toronto. She is fluent in English and Spanish. Her hobbies include running and mountain biking."]}
                 image="team/2.jpg"
               />
             </Flex>
@@ -273,7 +273,7 @@ export default function HomePage() {
       >
         <Block
           type="map"
-          address="1039 Upper James St. Hamilton Ontario"
+          address="26 Legend Court - Units 3 and 4, Ancaster. L9K 1J3"
           title="Ancaster Central Childrens Clinic"
           height={400}
           borderRadius="8px"
